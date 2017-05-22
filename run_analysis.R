@@ -88,4 +88,5 @@ finalData <- namedData[, c(index, (1:ncol(namedData))[-index])]
 ##subject and activity and write into text file
 
 averages<- aggregate(. ~SubjectID + ActivityType, finalData, mean)
-write.table(averages, "averages.txt")
+write.table(averages, "averages.txt", row.name=FALSE)
+
